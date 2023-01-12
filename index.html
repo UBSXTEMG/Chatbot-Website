@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p><iframe style="min-width: 400px; width: 100%; min-height: 500px;" src="https://webchat.botframework.com/embed/Bot0-0?s=GSh1v9FGd5I.55Yl0kSMY6Je3TPtaUv3bvUDAKJW4YRcvM5HxDzsGUc"></iframe></p>
+  <iframe id="chat" style="width: 400px; height: 400px;" src=''></iframe>
+</body>
+<script>
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+    xhr.setRequestHeader('Authorization', 'BotConnector ' + 'M7XtZQHjs68.kye6E7O4k8Zj84Cus2822Go4osT_2mmPIUvwFz4XJpg');
+    xhr.send();
+    xhr.onreadystatechange = processRequest;
+
+    function processRequest(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        document.getElementById("chat").src="https://webchat.botframework.com/embed/<botname>?t="+response
+      }
+    }
+
+  </script>
 </html>
