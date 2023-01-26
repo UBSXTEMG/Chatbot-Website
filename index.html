@@ -1,22 +1,7 @@
 <!-----HTML Code--->
-<head><nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">UBS Chatbot</a>
-
-       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-
-              
-                <li class="nav-item active">
-                    <a class="nav-link"  onclick="openPage('Showcase',this)" id="defaultOpen" ><i class="fas fa-tachometer-alt"></i>Showcase</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"  onclick="openPage('Development',this)"><i class="far fa-calendar-alt"></i>Development</a>
-              </li>
-              
-            </ul>
-        </div>
+<head><nav class="navbar-mainbg">
+            <button  onclick="openPage('Showcase',this)" id="defaultOpen" >Showcase</button>
+            <button  onclick="openPage('Development',this)">Development</button>
   </nav> </head>
 <!--<div class="container">-->
   <!--dust particel-->
@@ -89,43 +74,15 @@
 <style>
 
 /*----------bootstrap-navbar-css------------*/
-.navbar-logo{
-	padding: 15px;
-	color: #fff;
-}
+
 .navbar-mainbg{
 background: linear-gradient(90deg, rgba(232,3,3,1) 0%, rgba(231,154,63,1) 11%, rgba(241,221,15,1) 24%, rgba(188,233,125,1) 37%, rgba(73,223,139,0.458420868347339) 52%, rgba(87,218,222,1) 62%, rgba(120,100,225,1) 76%, rgba(181,129,228,1) 87%, rgba(150,220,236,0.46122198879551823) 100%);
-	padding: 0px;
-}
-
-
-ul,li,a,i{
-	margin-right: 10px;
-}
-li {
-	list-style-type: none;
-	float: left;
+	padding: 10px;
 }
 
 
 
-	.navbar-expand-custom {
-	    -ms-flex-flow: row nowrap;
-	    flex-flow: row nowrap;
-	    -ms-flex-pack: start;
-	    justify-content: flex-start;
-	}
-	.navbar-expand-custom .navbar-nav {
-	    -ms-flex-direction: row;
-	    flex-direction: row;
-	}
-	
-	.navbar-expand-custom .navbar-collapse {
-	    display: -ms-flexbox!important;
-	    display: flex!important;
-	    -ms-flex-preferred-size: auto;
-	    flex-basis: auto;
-	}
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap')
